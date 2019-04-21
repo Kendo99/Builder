@@ -1,6 +1,6 @@
 Feature: Checkout
 
-    @tag4
+    @tag5
     Scenario Outline: Checkout a banana
     Given the price of a "<fruit>" is "<cost>"
     When I checkout quantity "<quantity>"
