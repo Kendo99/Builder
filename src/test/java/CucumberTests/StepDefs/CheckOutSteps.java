@@ -12,10 +12,30 @@ import static org.junit.Assert.*;
  */
 public class CheckOutSteps {
 
-    int bananaPrice;
+    int fruitPrice;
     Checkout checkout = new Checkout();
 
+    @Given("^the price of a \"([^\"]*)\" is \"([^\"]*)\"$")
+    public void thePriceOfAIs(String name, int price) throws Throwable {
+        fruitPrice = price;
+        System.out.println("Price is : " + fruitPrice );
 
+    }
+
+    @When("^I checkout quantity \"([^\"]*)\"$")
+    public void iCheckoutQuantity(int itemCount) throws Throwable {
+
+        System.out.println("Hello there!!!! ");
+        checkout.add(itemCount, fruitPrice );
+
+    }
+
+    @Then("^the total price should be \"([^\"]*)\"$")
+    public void theTotalPriceShouldBe(int total ) throws Throwable {
+        assertEquals(total, checkout.total());
+    }
+
+    /*
     @Given("^the price of a \"([^\"]*)\" is (\\d+)c$")
     public void thePriceOfAIsC(String name, int price) throws Throwable {
         bananaPrice = price;
@@ -24,12 +44,13 @@ public class CheckOutSteps {
 
     @When("^I checkout (\\d+) \"([^\"]*)\"$")
     public void iCheckout(int itemCount, String itemName) throws Throwable {
-        // Write code here that turns the phrase above into concrete actions
+
 
         System.out.println("Hello there!!!! ");
         checkout.add(itemCount, bananaPrice);
 
     }
+
 
     @Then("^the total price should be (\\d+)c$")
     public void theTotalPriceShouldBeC(int total) throws Throwable {
@@ -39,13 +60,7 @@ public class CheckOutSteps {
 
 
     }
-
-    @Then("^its a bla$")
-    public void its_a_bla() throws Throwable {
-        // Write code here that turns the phrase above into concrete actions
-        throw new PendingException();
-    }
-
+**/
 
 
 }

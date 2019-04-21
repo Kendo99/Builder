@@ -1,10 +1,15 @@
 Feature: Checkout
 
     @tag1
-    Scenario: Checkout a banana
-    Given the price of a "banana" is 40c
-    When I checkout 1 "banana"
-    Then the total price should be 40c
+    Scenario Outline: Checkout a banana
+    Given the price of a "<fruit>" is "<cost>"
+    When I checkout quantity "<quantity>"
+    Then the total price should be "<totalPrice>"
+
+    Examples:
+      | fruit  | cost | quantity | totalPrice |
+      | banana | 40   | 1        | 40         |
+      | apple  | 80   | 3        | 240        |
 
     #Scenario Outline: Checkout bananas
     #Given the price of a "banana" is 40c
