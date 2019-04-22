@@ -1,6 +1,15 @@
 Feature: Checkout
 
-    @tag3
+
+    @tag5
+    Scenario: Enter name and address details for a signup form
+        And I enter a valid first name and last name
+        And I enter a valid address
+        And I enter a valid zipcode
+        When I click on the sign up button
+        Then I should see a successful receipt page
+
+    @tag5 @ignore
     Scenario Outline: Checkout a banana
     Given the price of a "<fruit>" is "<cost>"
     When I checkout quantity "<quantity>"
@@ -10,6 +19,16 @@ Feature: Checkout
       | fruit  | cost | quantity | totalPrice |
       | banana | 40   | 1        | 40         |
       | apple  | 80   | 3        | 240        |
+
+    @tag5 @ignore
+    Scenario: Enter data and Submit form
+    And I enter a valid first name
+    And I enter a valid last name
+    And I enter a valid email address
+    And I enter comments
+    When I click on the submit button
+    Then the information should successfully be submitted via the contact us form
+
 
     #Scenario Outline: Checkout bananas
     #Given the price of a "banana" is 40c

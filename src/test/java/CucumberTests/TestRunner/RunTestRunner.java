@@ -7,7 +7,7 @@ import cucumber.api.junit.Cucumber; // use junit with cucumber
 @RunWith(Cucumber.class) // this works with junit
 /*@CucumberOptions(features = {"src/test/java/features"}, format = {"json:target/cucumber.json","html:target/site/cucumber-pretty" }, glue = "Steps")*/
 
-@CucumberOptions(features = {"src/test/java/features"}, format = {"json:target/cucumber.json","html:target/site/cucumber-pretty" }, glue = "CucumberTests", tags = {"@tag2"} )
+@CucumberOptions(features = {"src/test/java/features"}, format = {"json:target/cucumber.json","html:target/site/cucumber-pretty" }, glue = {"CucumberTests" }, tags = {"@tag5", "~@ignore"} )
 
 
 //@CucumberOptions(features = {"src/test/java/features"}, format = {"json:target/cucumber.json","html:target/site/cucumber-pretty" })
