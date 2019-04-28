@@ -1,7 +1,17 @@
 Feature: Checkout
 
-
     @tag5
+    Scenario Outline: Enter details into login page
+        Given I launch the webpage
+        When I select the modal window
+        And I enter a "<username>" and "<password>"
+        And I login
+        Then I should be successfully logged in
+        Examples:
+            | username | password |
+            | Dick     | Turpin   |
+
+    @tag5 @ignore
     Scenario: Enter name and address details for a signup form
         And I enter a valid first name and last name
         And I enter a valid address

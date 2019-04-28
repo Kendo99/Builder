@@ -1,6 +1,7 @@
 package CucumberTests.StepDefs;
 
 import Implementation.Checkout;
+import Implementation.DemoPage;
 import Implementation.ReceiptPage;
 import Implementation.SignUpPage;
 
@@ -28,6 +29,8 @@ public class CheckOutSteps {
     WebDriver driver;
     SignUpPage signUpPage;
     ReceiptPage receiptPage;
+    DemoPage demoPage;
+
 
     @Before()
     public void setup()
@@ -40,6 +43,35 @@ public class CheckOutSteps {
 
     }
 
+
+
+    @When("^I select the modal window$")
+    public void iSelectTheModalWindow() {
+        demoPage = new DemoPage(driver);
+        demoPage.navigateTo();
+        demoPage.openModalWindow();
+
+    }
+
+    @Given("^I launch the webpage$")
+    public void i_launch_the_webpage() throws Throwable {
+
+    }
+
+    @When("^I enter a \"([^\"]*)\" and \"([^\"]*)\"$")
+    public void i_enter_a_and(String userName, String Password) throws Throwable {
+        demoPage.enterCredentials( userName, Password);
+    }
+
+    @When("^I login$")
+    public void i_login() throws Throwable {
+
+    }
+
+    @Then("^I should be successfully logged in$")
+    public void i_should_be_successfully_logged_in() throws Throwable {
+
+    }
 
     @Given("^I enter a valid first name and last name$")
     public void i_enter_a_valid_first_name_and_last_name() throws Throwable {
@@ -92,6 +124,8 @@ public class CheckOutSteps {
         **/
 
     }
+
+
 
     /***
     @Given("^the price of a \"([^\"]*)\" is \"([^\"]*)\"$")
