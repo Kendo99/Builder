@@ -18,6 +18,10 @@ import lombok.ToString;
 
 public class Person {
     @Getter(lazy = true) private final Boolean isOverEighteen = checkEighteen();
+    @Getter(lazy = true) private final int agePerson = this.age;
+    @Getter(lazy = true) private final String FirstName = this.name;
+
+    //@Getter(lazy = true) private final int fullname = personDetails();
     private Integer id;
     private String name;
     private String country;
@@ -28,6 +32,16 @@ public class Person {
         // very complicated calculations
         return 18 <= this.age;
     }
+
+/*
+    private int agePerson() {
+        return this.age;
+    }
+
+    public String fullname() {
+        return this.name;
+    }
+*/
 
 }
 /*

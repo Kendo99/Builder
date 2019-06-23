@@ -21,7 +21,14 @@ public class PersonDemo {
                 .age(25)
                 .build();
 
+
         System.out.println(person);
+        //System.out.println(person.fullname());
+
+        System.out.println(person.getAgePerson());
+        System.out.println(person.getFirstName());
+
+        ///getPersonAge());
 
         // OLD method using builder class
         //PersonX.PersonBuilder builder = new PersonX.PersonBuilder();
