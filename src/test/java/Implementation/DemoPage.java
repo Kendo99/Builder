@@ -27,7 +27,9 @@ public class DemoPage extends BasePage {
     public DemoPage navigateTo() {
         driver.navigate().to("https://www.seleniumeasy.com/test/window-popup-modal-demo.html");
 
-        assertEquals("Selenium Easy test - Window Popup Modal Demo", driver.getTitle());
+
+
+        assertEquals("Selenium Easy - Window Popup Modal Demo", driver.getTitle());
 
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
@@ -72,6 +74,10 @@ public class DemoPage extends BasePage {
 
     }
 
+
+
+
+
     public void enterCredentials(String username, String password ) {
 
         WebElement remember = driver.findElement(rememberSelector);
@@ -84,7 +90,23 @@ public class DemoPage extends BasePage {
         //last_name.sendKeys(lastName);
 
     }
+/*
+    public void getData() {
 
+        Task task = new TaskBuilder.TaskBuilder("test").setDescription("Hello").setSummary("Test").build();
+
+
+
+        //Task task = new TaskBuilder(5).set("test).setDescription("Hello").setSummary("Test").build();
+        System.out.println(task);
+    }
+
+
+
+
+    }
+
+*/
 
 
 }

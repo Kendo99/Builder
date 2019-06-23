@@ -126,5 +126,10 @@
     <orderEntry type="library" name="Maven: commons-digester:commons-digester:1.6" level="project" />
     <orderEntry type="library" name="Maven: oro:oro:2.0.8" level="project" />
     <orderEntry type="library" name="Maven: org.apache.maven.shared:maven-doxia-tools:1.0.2" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Maven: org.projectlombok:lombok:1.18.8" level="project" />
+    <orderEntry type="library" name="Maven: com.github.javafaker:javafaker:0.15" level="project" />
+    <orderEntry type="library" name="Maven: org.yaml:snakeyaml:android:1.20" level="project" />
+    <orderEntry type="library" name="Maven: com.github.mifmif:generex:1.0.2" level="project" />
+    <orderEntry type="library" name="Maven: dk.brics.automaton:automaton:1.11-8" level="project" />
   </component>
 </module>
