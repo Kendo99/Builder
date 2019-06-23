@@ -6,6 +6,7 @@ package Implementation.LombokBuilder;
 import lombok.Builder;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
+import lombok.Setter;
 import lombok.ToString;
 
 @ToString(exclude = "id")
